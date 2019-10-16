@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portifolio adelia camargo</title>
+
+    <!--Links-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark shadow fixed-top" id="navbar">
+                <a class="navbar-brand" href="#">Adélia Camargo</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#home">Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#sobre" id="sobrelink">Sobre</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+    <header class="banner-img" id="home">
+        <div class="container-fluid h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 text-center back-text">
+                    <h1 class="display-4 anima text-white">Adélia Camargo</h1>
+                    <p class="lead text-white" id="subtitulo"></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid bg-white pt-5">
+        <div class="row">
+
+            <div class="col d-flex justify-content-center" id="alvo">
+                <img src="img/icons/html96.png">
+            </div>            
+            <div class="col d-flex justify-content-center" id="alvo1">
+                <img src="img/icons/css96.png">
+            </div>
+            <div class="col d-flex justify-content-center" id="alvo2">
+                <img src="img/icons/js96.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5" id="sobre">
+        <div class="row">
+            <div class="col-lg-5">
+                <h1 class="grosso">Sobre mim</h1>
+                <p class="lead">Conheça mais sobre mim.</p>
+                <hr>
+                <p class="display-4 pt-5 text-secondary">
+                     Meu nome é Adélia sou paulista aquariana e mãe de gato
+                </p>
+
+                <p class="lead pt-5">
+                    Mas nada disso importa, sou Desenvolvedora web e faço isso
+                    porque eu simplesmente amo desenvolvimento, apaixonada Por php mas não
+                    rejeito outras linguagens mas sou movida a gambiarra.
+                </p>
+            </div>
+            <div class="col-lg-5 ml-5 pl-5">
+                <h1 class="grosso">Serviços</h1>
+                <p class="lead">Os serviços oferecido por mim</p>
+                <hr>
+                <!--texto-->
+                <p class="pt-5 text-secondary text-titulo">HTML/CSS</p>
+                <p>
+                    Desenvolvo sites e blogs utilizando o html e css, e para da uma ajuda uso o bootstrap como framework e o jquery.
+                </p>
+
+                <!--/texto-->
+                                <!--texto-->
+                <p class="pt-5 text-secondary text-titulo">JAVASCRIPT</p>
+                <p>Faço um bom uso do javascript principalmente no client-side, criando sistemas de mascaras, confirmações e muito mais.</p>
+
+                <!--/texto-->
+                <!--texto-->
+                <p class="pt-5 text-secondary text-titulo">PHP</p>
+                <p>Programo em php utilizando mysql como banco de dados.
+                    Faço sistemas, desenvolvo sites e manutenção
+                </p>
+
+                <!--/texto-->
+            </div>
+        </div>
+    </div>
+
+<script>
+$(document).scroll(function() {
+  if ($(this).scrollTop() > 100) {
+    console.log("ultra")
+    $("#alvo").addClass("anima1")
+    $("#alvo1").addClass("anima1")
+    $("#alvo2").addClass("anima1")
+  }
+});
+
+$(window).scroll(function () {
+  if($(this).scrollTop() > 500) {
+    $("#navbar").fadeOut();
+  }
+  else {
+    $("#navbar").fadeIn();
+  }
+})
+var div = document.getElementById('subtitulo');
+var texto = 'Desenvolvedora Web';
+
+function escrever(str, el) {
+  var char = str.split('').reverse();
+  var typer = setInterval(function() {
+    if (!char.length) return clearInterval(typer);
+    var next = char.pop();
+    el.innerHTML += next;
+    
+  }, 100);
+}
+
+escrever(texto, div);
+</script>
+</body>
+</html>

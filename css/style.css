@@ -1,0 +1,61 @@
+
+
+.banner-img {
+    background-image: url("../img/tech.jpg");
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.back-text{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.item-menu {
+    font-size: 32px;
+}
+
+.anima {
+    animation: spin 1s linear;
+}
+
+@keyframes spin {
+    0% {
+        letter-spacing: 10px;
+    }
+
+    100% {
+        letter-spacing: 0px;
+    }
+}
+
+
+.anima1 {
+    animation: icones 1s linear;
+}
+
+@keyframes icones {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.grosso {
+    font-size: 60px;
+    font-weight: 300px;
+}
+
+.text-titulo {
+    font-size: 28px;
+}
+
+.borda {
+    border-top: solid white 3px;
+    border-bottom: solid white 3px;
+}
